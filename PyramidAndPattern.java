@@ -8,10 +8,10 @@ public class PyramidAndPattern {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int chose, num, n = 5, quit = 0;
+        int chose, num, n = 5;
 
         clear();
-        while (quit != 1) {
+        while (true) {
             System.out.println("""
                                ---Piramides---
                                [1]Meia piramede
@@ -117,7 +117,8 @@ public class PyramidAndPattern {
                     }
                 }
                 case 0 -> {
-                    quit = 1;
+                    in.close();
+                    System.exit(0);
                 }
                 default -> {
                     clear();
@@ -125,6 +126,5 @@ public class PyramidAndPattern {
                 }
             }
         }
-        in.close();
     }
 }
