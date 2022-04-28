@@ -6,7 +6,7 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int escolha, n = 10, num;
+            int chose, n = 10, num;
 
             while (true)
             {
@@ -15,7 +15,7 @@ namespace ConsoleApp2
                     "\n[7] - Piramide padrão númerico\n[0] - Exit");
                 escolha = int.Parse(Console.ReadLine());
 
-                switch (escolha)
+                switch (chose)
                 {
                     case 1:
                         {
