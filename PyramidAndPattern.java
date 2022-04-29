@@ -1,14 +1,16 @@
-package project.pyramidandpattern;
+//package project.pyramidandpattern;
 
 import java.util.Scanner;
 
 public class PyramidAndPattern {
 
+    public static void clear(){ System.out.println("\033[H\033[2J"); }
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int chose, n = 5, num;
+        int chose, num, n = 5;
 
+        clear();
         while (true) {
             System.out.println("""
                                ---Piramides---
@@ -25,8 +27,7 @@ public class PyramidAndPattern {
             switch (chose) {
 
                 case 1 -> {
-
-                    System.out.println();
+                    clear();
                     for (int i = 0; i < n; i++) {
                         for (int a = 0; a <= i; a++) {
                             System.out.print("* ");
@@ -35,8 +36,7 @@ public class PyramidAndPattern {
                     }
                 }
                 case 2 -> {
-
-                    System.out.println();
+                    clear();
                     for (int i = 0; i < n; i++) {
                         for (int a = 2 * (n - i); a >= 0; a--) {
                             System.out.print(" ");
@@ -48,8 +48,7 @@ public class PyramidAndPattern {
                     }
                 }
                 case 3 -> {
-
-                    System.out.println();
+                    clear();
                     for (int i = 0; i < n; i++) {
                         for (int a = n - i; a > 1; a--) {
                             System.out.print(" ");
@@ -62,8 +61,7 @@ public class PyramidAndPattern {
                 }
                 case 4 -> {
                     n = 6;
-
-                    System.out.println();
+                    clear();
                     for (int i = 1; i <= n; i++) {
                         for (int a = 1; a < i; a++) {
                             System.out.print(" ");
@@ -76,8 +74,7 @@ public class PyramidAndPattern {
                 }
                 case 5 -> {
                     n = 7;
-
-                    System.out.println();
+                    clear();
                     for (int i = 1; i <= n; i++) {
                         for (int a = 1; a < i; a++) {
                             System.out.print(" ");
@@ -98,8 +95,7 @@ public class PyramidAndPattern {
                     }
                 }
                 case 6 -> {
-
-                    System.out.println();
+                    clear();
                     for (int i = 0; i < n; i++) {
                         num = 1;
                         for (int a = 0; a <= i; a++) {
@@ -111,8 +107,7 @@ public class PyramidAndPattern {
                 }
                 case 7 -> {
                     num = 1;
-
-                    System.out.println();
+                    clear();
                     for (int i = 0; i < n; i++) {
                         for (int a = 0; a <= i; a++) {
                             System.out.print(num + " ");
@@ -122,10 +117,12 @@ public class PyramidAndPattern {
                     }
                 }
                 case 0 -> {
+                    in.close();
                     System.exit(0);
                 }
                 default -> {
-                    System.out.print("Valor invalido\n ");
+                    clear();
+                    System.out.print("Valor invalido\n");
                 }
             }
         }
