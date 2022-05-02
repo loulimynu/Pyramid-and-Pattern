@@ -1,5 +1,3 @@
-package project.pyramidandpattern;
-
 import java.util.Scanner;
 
 public class PyramidAndPattern {
